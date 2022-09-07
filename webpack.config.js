@@ -28,4 +28,9 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({ filename: "[name].css" }),
   ],
+  devServer: {
+	allowedHosts: path.join(__dirname, 'dist'),
+	compress: true,
+	port: 3005,
+}
 };
