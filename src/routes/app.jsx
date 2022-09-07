@@ -10,14 +10,14 @@ import '../styles/global.css';
 const App = () => {
 	return (
 		<BrowserRouter>
+		<Layout>
 			<Switch>
-				<Layout>
 					<Route exact path="/" component={Home} />
 					<Route exact path="/login" component={Login} />
 					<Route exact path="/recovery-password" component={RecoveryPassword} />
 					<Route component={NotFound} />
-				</Layout>	
 			</Switch>
+		</Layout>	
 		</BrowserRouter>
 	);
 }
