@@ -7,10 +7,16 @@ import '../styles/global.css';
 
 const App = () => {
 	return (
-		<Layout>
-			<Login />
-			<RecoveryPassword />
-		</Layout>
+		<BrowserRouter>
+			<Switch>
+				<Layout>
+					<Route exact path="/" component={Home} />
+					<Route exact path="/login" component={Login} />
+					<Route exact path="/recovery-password" component={RecoveryPassword} />
+					<Route component={NotFound} />
+				</Layout>	
+			</Switch>
+		</BrowserRouter>
 	);
 }
 
